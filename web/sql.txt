@@ -1,0 +1,29 @@
+create table cliente (
+	rut varchar2(15),
+	nombre varchar2(30),
+	comuna varchar2(15),
+	email varchar2(40),
+	password varchar2(50),
+	fono number(9,0),
+	tipo varchar2(5));
+
+create table cita (
+	fecha date,
+    	hora varchar2(5),
+    	empleado varchar2(30),
+	requerimiento varchar2(30),
+	cliente varchar2(15),
+	estado varchar2(15));
+
+create table requerimiento (
+	requerimiento varchar2(30),	
+	precio number(9,0)
+	descripcion varchar(70));
+
+insert into requerimiento (requerimiento, precio, descripcion) values('Requerimiento A', 12000,'Corte + Peinado');
+insert into requerimiento (requerimiento, precio, descripcion) values('Requerimiento B', 18000,'Corte + Peinado + Tintura');
+insert into requerimiento (requerimiento, precio, descripcion) values('Requerimiento C', 7000,'Manicure');
+insert into requerimiento (requerimiento, precio, descripcion) values('Requerimiento D', 10000,'Depilación');
+
+insert into cliente (rut, nombre, comuna, email, password, fono, tipo) values 
+		('1-9','Peloduro','Maipú','admin@peloduro.cl', '123456',09876543,'admin');
